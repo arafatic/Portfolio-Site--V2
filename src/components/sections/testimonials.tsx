@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
@@ -31,13 +31,21 @@ const TESTIMONIALS = [
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
-  };
+  }, []);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
-  };
+  }, []);
+
+  // Auto-advance every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
 
   return (
     <section id="testimonials" className="w-full bg-background border-t border-border/40 py-20 md:py-32 relative overflow-hidden">
@@ -60,10 +68,10 @@ export function Testimonials() {
             {TESTIMONIALS.map((testimonial, index) => (
               <div 
                 key={index}
-                className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-700 ease-in-out px-4 ${
+                className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-1000 ease-out px-4 ${
                   index === currentIndex 
-                    ? "opacity-100 translate-y-0 z-10 pointer-events-auto" 
-                    : "opacity-0 translate-y-4 z-0 pointer-events-none"
+                    ? "opacity-100 translate-y-0 scale-100 blur-0 z-10 pointer-events-auto" 
+                    : "opacity-0 translate-y-8 scale-95 blur-[4px] z-0 pointer-events-none"
                 }`}
               >
                 {/* Avatar */}
