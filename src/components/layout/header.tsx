@@ -14,7 +14,7 @@ export function Header() {
                 alt="Arafatul" 
                 width={40} 
                 height={40} 
-                className="w-[40px] h-auto object-contain"
+                className="w-[40px] h-auto object-contain dark:invert"
                 priority
               />
             </span>
@@ -49,7 +49,7 @@ export function Header() {
               alt="Arafatul" 
               width={32} 
               height={32} 
-              className="w-[32px] h-auto object-contain"
+              className="w-[32px] h-auto object-contain dark:invert"
               priority
             />
           </Link>

@@ -6,7 +6,7 @@ export function Hero() {
     <section className="container mx-auto px-4 sm:px-8 py-24 md:py-32 lg:py-40">
       <div className="flex max-w-[980px] flex-col items-start gap-4">
         <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl lg:leading-[1.1]">
-          Building digital products, brands, and experience.
+          Building digital products,<br /> brands, and experience.
         </h1>
         <p className="max-w-[750px] text-lg text-muted-foreground sm:text-xl">
           Driven by clarity, curiosity, and thoughtful execution.

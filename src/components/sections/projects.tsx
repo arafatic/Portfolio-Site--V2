@@ -81,10 +81,10 @@ export function Projects() {
 
               {/* Content Container */}
               <div className="relative z-10 px-4 py-[45px] lg:p-10 w-full max-w-4xl flex flex-col lg:justify-center">
-                <h3 className={`font-bold text-3xl md:text-5xl mb-3 ${lightBg ? 'text-zinc-900' : 'text-white'}`}>
+                <h3 className={`font-bold text-3xl md:text-5xl mb-3 text-foreground ${lightBg ? 'lg:text-zinc-900' : 'lg:text-white'}`}>
                   {project.title}
                 </h3>
-                <p className={`md:text-lg mb-6 line-clamp-2 md:line-clamp-none max-w-2xl ${lightBg ? 'text-zinc-600' : 'text-zinc-300'}`}>
+                <p className={`md:text-lg mb-6 line-clamp-2 md:line-clamp-none max-w-2xl text-muted-foreground ${lightBg ? 'lg:text-zinc-600' : 'lg:text-zinc-300'}`}>
                   {project.description}
                 </p>
 
@@ -92,7 +92,7 @@ export function Projects() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className={`inline-flex items-center rounded-full bg-white/10 backdrop-blur-md border px-3 py-1 text-xs md:text-sm font-medium shadow-sm ${lightBg ? 'border-zinc-400 text-zinc-700' : 'border-zinc-500 text-zinc-200'}`}
+                      className={`inline-flex items-center rounded-full lg:bg-white/10 backdrop-blur-md border px-3 py-1 text-xs md:text-sm font-medium shadow-sm border-border text-foreground ${lightBg ? 'lg:border-zinc-400 lg:text-zinc-700' : 'lg:border-zinc-500 lg:text-zinc-200'}`}
                     >
                       {tech}
                     </span>
@@ -104,7 +104,7 @@ export function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold hover:opacity-80 transition-opacity shadow-lg w-fit ${lightBg ? 'text-zinc-900 border-zinc-800' : 'text-white border-white'}`}
+                    className={`inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold hover:opacity-80 transition-opacity shadow-lg w-fit border-border text-foreground ${lightBg ? 'lg:text-zinc-900 lg:border-zinc-800' : 'lg:text-white lg:border-white'}`}
                     aria-label={`View ${project.title}`}
                   >
                     View Project
