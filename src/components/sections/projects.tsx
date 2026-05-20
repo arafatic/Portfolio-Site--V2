@@ -47,7 +47,7 @@ const PROJECTS = [
     tech: ["Photoshop", "Illustrator", "Illustration"],
     link: "https://www.behance.net/gallery/202946259/Dhaka-1980s-Illustration",
     github: "#",
-    image: "/dhaka-1980.jpg",
+    image: "/Dhaka-1980.jpg",
     bgColor: "#ffffff",
   },
 ];
