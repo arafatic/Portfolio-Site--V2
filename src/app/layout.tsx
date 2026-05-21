@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Arafatul",
   description: "Personal portfolio website",
+  generator: "Custom Engine",
   icons: {
     icon: "/arafatul-logo.svg",
   },
