@@ -18,7 +18,7 @@ const PROJECTS = [
     tech: ["Figma", "Photoshop", "Illustrator"],
     link: "https://www.behance.net/gallery/233828921/Teletalk-Landing-page-redesign",
     github: "#",
-    image: "/teletalk-rebrand-concept.jpg.jpg",
+    image: "/teletalk-rebrand-concept.jpg",
     bgColor: "#ffffff",
     containImage: true,
   },
