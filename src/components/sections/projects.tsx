@@ -19,7 +19,7 @@ const PROJECTS = [
     link: "https://www.behance.net/gallery/233828921/Teletalk-Landing-page-redesign",
     github: "#",
     image: "/teletalk-rebrand-concept.jpg",
-    bgColor: "#ffffff",
+    bgColor: "#35858B", // Teal background of the image
     containImage: true,
   },
   {
@@ -29,7 +29,7 @@ const PROJECTS = [
     link: "https://www.behance.net/arafat7",
     github: "#",
     image: "/social-media.jpg",
-    bgColor: "#000000",
+    bgColor: "#ccff00", // Lime green background
     containImage: true,
   },
   {
