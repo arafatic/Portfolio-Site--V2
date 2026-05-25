@@ -14,13 +14,13 @@ export function Hero() {
         <div className="flex w-full items-center justify-start gap-4 py-4">
           <Link
             href="#projects"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 h-10"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             View Projects
           </Link>
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center rounded-md border border-border bg-transparent px-8 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground h-10 group"
+            className="inline-flex items-center justify-center rounded-full border border-border bg-transparent px-8 py-3 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground group"
           >
             Get in touch
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

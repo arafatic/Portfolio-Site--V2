@@ -10,7 +10,7 @@ export function Contact() {
         </p>
         <a
           href="mailto:arafatul.designer@gmail.com"
-          className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+          className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
         >
           <Mail className="mr-2 h-4 w-4" />
           Say Hello

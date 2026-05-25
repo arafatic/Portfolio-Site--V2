@@ -104,7 +104,7 @@ export function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold hover:opacity-80 transition-opacity shadow-lg w-fit border-border text-foreground ${lightBg ? 'lg:text-zinc-900 lg:border-zinc-800' : 'lg:text-white lg:border-white'}`}
+                    className="inline-flex items-center justify-center rounded-full bg-background text-foreground px-6 py-3 text-sm font-semibold hover:opacity-80 transition-opacity w-fit"
                     aria-label={`View ${project.title}`}
                   >
                     View Project
