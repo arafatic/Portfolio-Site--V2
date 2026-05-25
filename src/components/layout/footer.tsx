@@ -1,19 +1,52 @@
 "use client";
 
 import { ArrowUp } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function Footer() {
+  const [bdTime, setBdTime] = useState<string>("");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const updateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = { 
+        timeZone: 'Asia/Dhaka',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      };
+      setBdTime(new Intl.DateTimeFormat('en-US', options).format(now));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="border-t border-border/40 py-8 relative">
-      <div className="container mx-auto px-4 flex justify-center items-center">
+      <div className="container mx-auto px-4 sm:px-8 flex justify-between items-center">
         <p className="text-sm md:text-base text-muted-foreground">
-          <span>&copy; 2026 Arafatul.</span>{" "}
+          <span>&copy; {new Date().getFullYear()} Arafatul.</span>{" "}
           <span className="opacity-70">Designed & built.</span>
         </p>
+        
+        <div className="flex flex-col items-end text-right mr-9 md:mr-16">
+          <span className="text-xs text-muted-foreground opacity-70 mb-0.5">
+            Dhaka, Bangladesh &bull; UTC+6
+          </span>
+          <span className="text-sm md:text-base text-muted-foreground font-medium min-h-[1.5rem]">
+            {mounted ? bdTime : ""}
+          </span>
+        </div>
       </div>
 
       <button

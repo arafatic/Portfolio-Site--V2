@@ -92,7 +92,7 @@ export function Projects() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className={`inline-flex items-center rounded-full lg:bg-white/10 backdrop-blur-md border px-3 py-1 text-xs md:text-sm font-medium shadow-sm border-border text-foreground ${lightBg ? 'lg:border-zinc-400 lg:text-zinc-700' : 'lg:border-zinc-500 lg:text-zinc-200'}`}
+                      className={`inline-flex items-center rounded-full lg:bg-white/10 backdrop-blur-md border px-3 py-1 text-xs md:text-sm font-medium border-white text-foreground ${lightBg ? 'lg:text-zinc-700' : 'lg:text-zinc-200'}`}
                     >
                       {tech}
                     </span>
@@ -104,7 +104,7 @@ export function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full bg-background text-foreground px-6 py-3 text-sm font-semibold hover:opacity-80 transition-opacity w-fit"
+                    className="inline-flex items-center justify-center rounded-full bg-foreground text-background lg:bg-white lg:text-zinc-900 px-6 py-3 text-sm font-semibold hover:opacity-80 transition-opacity w-fit"
                     aria-label={`View ${project.title}`}
                   >
                     View Project
