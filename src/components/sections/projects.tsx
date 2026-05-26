@@ -92,7 +92,7 @@ export function Projects() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className={`inline-flex items-center rounded-full lg:bg-white/10 backdrop-blur-md border px-3 py-1 text-xs md:text-sm font-medium border-white text-foreground ${lightBg ? 'lg:text-zinc-700' : 'lg:text-zinc-200'}`}
+                      className={`inline-flex items-center rounded-full lg:bg-white/10 backdrop-blur-md border-[0.5px] px-3 py-1 text-xs md:text-sm font-medium border-white text-foreground ${lightBg ? 'lg:text-zinc-700' : 'lg:text-zinc-200'}`}
                     >
                       {tech}
                     </span>
