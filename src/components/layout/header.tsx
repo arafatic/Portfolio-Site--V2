@@ -12,9 +12,9 @@ export function Header() {
               <Image 
                 src="/logo-arafatul-dark.png" 
                 alt="Arafatul" 
-                width={40} 
-                height={40} 
-                className="w-[40px] h-auto object-contain dark:invert"
+                width={30} 
+                height={30} 
+                className="w-[30px] h-auto object-contain dark:invert"
                 priority
               />
             </span>
